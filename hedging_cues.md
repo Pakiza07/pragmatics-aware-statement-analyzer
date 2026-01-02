@@ -37,5 +37,3 @@
 - "From what I was told"
   
   **Important note:** Context matters, not every hedging term comes in the form of a hedge. 
-- "there is a chance that"
-- "tend to"
