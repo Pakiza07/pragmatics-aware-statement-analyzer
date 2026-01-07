@@ -19,7 +19,8 @@
 - generally
 - often
 - sometimes
-
+- likely
+  
 ## 4. Quantifiers
 - some
 - many
@@ -30,7 +31,6 @@
 - it seems that
 - there is a chance that
 - tend to
-- appear to
 
 ## 6. Epistemic Hedges
 - All I know is
