@@ -27,13 +27,14 @@
 - kind of
 
 ## 5. Phrasal Constructions
-- "it seems that"
-- "there is a chance that"
-- "tend to"
+- it seems that
+- there is a chance that
+- tend to
+- appear to
 
 ## 6. Epistemic Hedges
-- "All I know is"
-- "I'm not sure if"
-- "From what I was told"
+- All I know is
+- I'm not sure if
+- From what I was told
   
   **Important note:** Context matters, not every hedging term comes in the form of a hedge. 
