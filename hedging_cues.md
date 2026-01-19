@@ -16,6 +16,7 @@
 ## 3. Adverbs of Uncertainty
 - possibly
 - probably
+- potentially
 - generally
 - often
 - sometimes
