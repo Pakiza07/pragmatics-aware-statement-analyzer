@@ -16,8 +16,14 @@ the speaker is avoiding giving their opinion and is speaking around it.
     here, the second slogan doesn't explicitly claim that the coffee can give you enery but it implies that if you drink it you will be able to start your day in an energetic manner.
 
 
-Project Scope (v0.1)
+## Project Scope (v0.1)
 This initial version focuses on detecting hedging in written text. Other manipulation types (evasion, ambiguity, emotional coercion, implicit claims) are planned for future iterations.
 
-System Overview
+## System Overview
 The system takes a written statement as input and processes it through a pipeline consisting of text preprocessing, feature extraction, classification, and explainability. The output includes a predicted label indicating the presence of hedging-related language patterns, along with supporting explanations highlighting relevant phrases. In this project, hedging is operationalized through lexical cues, modal constructions, and uncertainty expressions that weaken or soften propositional commitment. The system is designed to be modular, allowing additional pragmatic categories to be incorporated as independent detection modules in future versions.
+
+## Dataset Observations (v0.1)
+- Class imbalance toward non-hedging statements
+- Labels are consistent and binary
+- Statements are short or mid-length
+- Some annotations are context-sensitive
