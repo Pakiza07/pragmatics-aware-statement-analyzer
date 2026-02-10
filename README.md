@@ -29,15 +29,15 @@ The system takes a written statement as input and processes it through a pipelin
 - Some annotations are context-sensitive
 
 ## Baseline Performance
-text| expected label| true label| verdict| error type
-Text	Expected Label	 True Label	 Verdict
-Fibre also appears to help the body get rid of bile acids which lowers cholesterol thus decreasing the risk of cardiovascular disease|	1|	1|	TRUE POSITIVE| NA
-All of this can have an impact on our brains the next day|	0|	0|	TRUE NEGATIVE| NA
-The study found that former professional footballers are five times more likely to develop Alzheimer's disease|	1|	1|	TRUE POSITIVE| NA
-Psychologists have found that people tend to become less neurotic and more conscientious and agreeable over the course of a lifetime|	1|	1| TRUE POSITIVE| NA
-This revolutionary tech could heal broken bones|	1|	1|	TRUE POSITIVE| NA
-There is something you can do to help promote your lungs' natural self-cleaning capacity though|	0| 1|	FALSE POSITIVE| NA
-Taking a break from alcohol often allows them to engage more meaningfully with loved ones|	0| 1|	FALSE POSITIVE| NA
-Alcohol has long been known to have a negative impact on sleep|	0|	0|	TRUE NEGATIVE| NA
+| Text | Expected Label | Predicted Label | Verdict | Error Type |
+|------|---------------|----------------|---------|-----------|
+| Fibre also appears to help the body get rid of bile acids which lowers cholesterol thus decreasing the risk of cardiovascular disease | 1 | 1 | TRUE POSITIVE | NA |
+| All of this can have an impact on our brains the next day | 0 | 0 | TRUE NEGATIVE | NA |
+| The study found that former professional footballers are five times more likely to develop Alzheimer's disease | 1 | 1 | TRUE POSITIVE | NA |
+| Psychologists have found that people tend to become less neurotic and more conscientious and agreeable over the course of a lifetime | 1 | 1 | TRUE POSITIVE | NA |
+| This revolutionary tech could heal broken bones | 1 | 1 | TRUE POSITIVE | NA |
+| There is something you can do to help promote your lungs' natural self-cleaning capacity though | 0 | 1 | FALSE POSITIVE | Contextual ambiguity |
+| Taking a break from alcohol often allows them to engage more meaningfully with loved ones | 0 | 1 | FALSE POSITIVE | Weak lexical hedge |
+| Alcohol has long been known to have a negative impact on sleep | 0 | 0 | TRUE NEGATIVE | NA |
 
 
