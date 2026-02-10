@@ -29,7 +29,7 @@ The system takes a written statement as input and processes it through a pipelin
 - Some annotations are context-sensitive
 
 ## Baseline Performance
-serial number, text, expected label, true label, verdict
+text, expected label, true label, verdict
 Text	Expected Label	 True Label	 Verdict
 Fibre also appears to help the body get rid of bile acids which lowers cholesterol thus decreasing the risk of cardiovascular disease,	1,	1,	TRUE POSITIVE
 All of this can have an impact on our brains the next day,	0,	0,	TRUE NEGATIVE
