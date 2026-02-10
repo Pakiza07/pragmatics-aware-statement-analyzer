@@ -40,4 +40,5 @@ The system takes a written statement as input and processes it through a pipelin
 | Taking a break from alcohol often allows them to engage more meaningfully with loved ones | 0 | 1 | FALSE POSITIVE | Weak lexical hedge |
 | Alcohol has long been known to have a negative impact on sleep | 0 | 0 | TRUE NEGATIVE | NA |
 
+False positives primarily arise from lexical hedges used in neutral informational contexts rather than manipulative discourse
 
