@@ -42,3 +42,8 @@ The system takes a written statement as input and processes it through a pipelin
 
 False positives primarily arise from lexical hedges used in neutral informational contexts rather than manipulative discourse
 
+## Dataset History
+Initial dataset: 55 samples
+Expansion: +90 samples
+Current total: 145 samples
+
