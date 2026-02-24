@@ -42,20 +42,21 @@ The system takes a written statement as input and processes it through a pipelin
 
 | Dataset Version | Total Samples | False Positives | False Negatives |
 |----------------|---------------|----------------|----------------|
-| v1 — Initial Dataset | 54 | 5 | 6 |
-| v2 — Expansion Round 1 | 144 | 5 | 7 |
-| v3 — Expansion Round 2 | TBD | TBD | TBD |
+| v1 — Initial Dataset | 55 | 5 | 6 |
+| v2 — Expansion Round 1 | 135  | 5 | 7 |
+| v3 — Expansion Round 2 | 170 | 5 | 7 |
 
 False positives primarily arise from lexical hedges used in neutral informational contexts rather than manipulative discourse
 
 ## Dataset History
 Initial dataset: 55 samples
-Expansion: +90 samples
-Current total: 145 samples
+Expansion 1: +80 samples
+Expansion 2: +35 samples
+Current total: 170 samples
 
 ## Dataset Integrity Check
 Checked for duplicate statements.
-Total statements checked: 144
+Total statements checked: 170
 Duplicate statements found: 0
 Action taken: None required
 
