@@ -28,7 +28,7 @@ The system takes a written statement as input and processes it through a pipelin
 - Statements are short or mid-length
 - Some annotations are context-sensitive
 
-## Baseline Performance
+## Baseline Performance Summary
 | Text | Expected Label | Predicted Label | Verdict | Error Type |
 |------|---------------|----------------|---------|-----------|
 | Fibre also appears to help the body get rid of bile acids which lowers cholesterol thus decreasing the risk of cardiovascular disease | 1 | 1 | TRUE POSITIVE | NA |
@@ -40,10 +40,22 @@ The system takes a written statement as input and processes it through a pipelin
 | Taking a break from alcohol often allows them to engage more meaningfully with loved ones | 0 | 1 | FALSE POSITIVE | Weak lexical hedge |
 | Alcohol has long been known to have a negative impact on sleep | 0 | 0 | TRUE NEGATIVE | NA |
 
+| Dataset Version | Total Samples | False Positives | False Negatives |
+|----------------|---------------|----------------|----------------|
+| v1 — Initial Dataset | 54 | 5 | 6 |
+| v2 — Expansion Round 1 | 144 | 5 | 7 |
+| v3 — Expansion Round 2 | TBD | TBD | TBD |
+
 False positives primarily arise from lexical hedges used in neutral informational contexts rather than manipulative discourse
 
 ## Dataset History
 Initial dataset: 55 samples
 Expansion: +90 samples
 Current total: 145 samples
+
+## Dataset Integrity Check
+Checked for duplicate statements.
+Total statements checked: 144
+Duplicate statements found: 0
+Action taken: None required
 
