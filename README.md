@@ -28,6 +28,14 @@ The system takes a written statement as input and processes it through a pipelin
 - Statements are short or mid-length
 - Some annotations are context-sensitive
 
+  
+## Baseline Evaluation Results
+----------------------------
+Accuracy: 0.9235294117647059
+Precision: 0.9204545454545454
+Recall: 0.9310344827586207
+F1 Score: 0.9257142857142857
+
 ## Baseline Performance Summary
 | Text | Expected Label | Predicted Label | Verdict | Error Type |
 |------|---------------|----------------|---------|-----------|
