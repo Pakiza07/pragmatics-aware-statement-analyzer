@@ -1,0 +1,6 @@
+text,label,prediction,error
+You can't eat poorly all day long and think that it's enough to have a glass of tart cherry juice before bedtime,0,1,True
+At some point in the future we'll be consuming insects more,0,1,True
+Taking a break from alcohol often allows them to engage more meaningfully with loved ones,0,1,True
+Flu vaccines do prevent some people from getting the flu but in general vaccines arenâ€™t great at preventing respiratory infections,0,1,True
+So vaccination basically eliminated about two-thirds of the hospitalizations that would have occurred without it,0,1,True
