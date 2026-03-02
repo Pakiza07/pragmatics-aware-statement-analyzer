@@ -124,11 +124,10 @@ The findings highlight an important property of pragmatics-aware language analys
   
 ## Confusion Matrix
 |                | Pred 0         | Pred 1         |
-|----------------+----------------+----------------|
+|----------------|----------------|----------------|
 | True 0         | TN = 10        | FP = 7         |
-|----------------+----------------+----------------|
 | True 1         | FN = 6         | TP = 11        |
-|----------------+----------------+----------------|
+
 
 ## Feature Importance Analysis
 Using Logistic Regression coefficients, the top indicators were extracted.
