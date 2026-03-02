@@ -23,11 +23,22 @@ This initial version focuses on detecting hedging in written text. Other manipul
 The system takes a written statement as input and processes it through a pipeline consisting of text preprocessing, feature extraction, classification, and explainability. The output includes a predicted label indicating the presence of hedging-related language patterns, along with supporting explanations highlighting relevant phrases. In this project, hedging is operationalized through lexical cues, modal constructions, and uncertainty expressions that weaken or soften propositional commitment. The system is designed to be modular, allowing additional pragmatic categories to be incorporated as independent detection modules in future versions.
 
 ## Dataset Observations (v0.1)
-- Class imbalance toward non-hedging statements
+- Relative balance between hedging and non-hedging statements
 - Labels are consistent and binary
 - Statements are short or mid-length
 - Some annotations are context-sensitive
 
+## Dataset History
+Initial dataset: 55 samples
+Expansion 1: +80 samples
+Expansion 2: +35 samples
+Current total: 170 samples
+
+## Dataset Integrity Check
+Checked for duplicate statements.
+Total statements checked: 170
+Duplicate statements found: 0
+Action taken: None required
   
 ## Baseline Evaluation Results
 ----------------------------
@@ -56,15 +67,125 @@ F1 Score: 0.9257142857142857
 
 False positives primarily arise from lexical hedges used in neutral informational contexts rather than manipulative discourse
 
-## Dataset History
-Initial dataset: 55 samples
-Expansion 1: +80 samples
-Expansion 2: +35 samples
-Current total: 170 samples
+## Feature Extraction 
+Text data was converted into numerical representations using TF-IDF vectorization.
+- Library: scikit-learn
+- Method: TfidfVectorizer
+- Stop words removed (English)
+- N-grams: Unigrams and Bigrams (1–2)
+  
+  Dataset size: 170 sentences  
+  Feature count: 1726 features
 
-## Dataset Integrity Check
-Checked for duplicate statements.
-Total statements checked: 170
-Duplicate statements found: 0
-Action taken: None required
+Including bigrams allowed the model to capture contextual hedging expressions such as "accounts suggest" and "potentially harmful".
 
+The resulting sparse matrix represents each sentence as a weighted vector of linguistic importance.
+
+## Machine Learning Model 
+
+After establishing a lexicon-based baseline, a machine learning approach was introduced to evaluate whether statistical learning could improve hedge detection.
+
+### Model Setup
+- Model: Logistic Regression
+- Features: TF-IDF Vectorization
+- Train/Test Split: 80/20
+- Dataset Size: 170 statements
+- Task: Binary classification (Hedged vs Non-Hedged)
+
+### Model Performance
+
+| Metric | Score |
+|---|---|
+| Accuracy | 0.62 |
+| Precision | 0.61 |
+| Recall | 0.65 |
+| F1 Score | 0.63 |
+
+### Baseline vs Machine Learning Comparison
+
+| Method | Approach | F1 Score |
+|---|---|---|
+| Lexicon-Based Detector | Rule-based hedge cues | **0.92** |
+| Logistic Regression | TF-IDF + ML | **0.63** |
+
+### Observations
+
+The machine learning model underperformed compared to the lexicon-based baseline.  
+This result suggests that explicit linguistic hedge cues provide strong prior knowledge in small datasets, while statistical models require larger datasets to generalize effectively.
+
+The findings highlight an important property of pragmatics-aware language analysis:
+
+> Linguistically informed rules can outperform machine learning models in low-resource settings.
+
+### Saved Artifacts
+- `tfidf_vectorizer.pkl` — trained feature extractor
+- `hedge_classifier.pkl` — trained ML classifier
+- `ml_predictions.csv` — model predictions on test data
+  
+## Confusion Matrix
++----------------+----------------+----------------+
+|                | Pred 0         | Pred 1         |
++----------------+----------------+----------------+
+| True 0         | TN = 10        | FP = 7         |
++----------------+----------------+----------------+
+| True 1         | FN = 6         | TP = 11        |
++----------------+----------------+----------------+
+
+## Feature Importance Analysis
+Using Logistic Regression coefficients, the top indicators were extracted.
+Top Hedge Indicators:
+- attract 
+- data
+- investors
+- effective
+- rise
+- experts
+- think
+- influence
+- economists
+- policy
+- spending
+- soon
+- analysts
+- support
+- experts
+- appears
+- suggest
+- suggests
+- likely
+- believe
+- think
+
+Top Non-Hedge Indicators:
+- sleep
+- alcohol
+- company
+- dreams
+- hours
+- eat
+- going
+- introduced
+- attracted
+- weekend
+- company
+- expanded
+- city
+- food
+- record
+- council
+- published
+- highway
+- important
+- time
+
+## Limitations
+Small dataset size
+Limited hedge vocabulary
+Context ambiguity
+No deep semantic modeling
+
+## Future Work
+Larger corpus
+Transformer models (BERT)
+News/online discourse application
+Multi-class hedging categories
